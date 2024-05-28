@@ -4,6 +4,8 @@ import ReactDOM from "react-dom/client";
 //Nested Heading with div tag having classname title
 //using react
 
+/*
+
 const header = React.createElement(
     "div",
     {
@@ -55,6 +57,20 @@ const header3 = (
         <h2 style={{color:"blue"}} key="h2"> This is heading2 </h2>
     </div>
 );
+const Sonal = () => {
+    return <h1>My name is Sonal</h1>;
+  };
+  
+  const Garg = () => {
+    return (
+      <div>
+        <h1>I am from Karnal</h1>
+        <Sonal />
+      </div>
+    );
+  };
+
+  */
 
 //composition of component
 //error in this code as I haven't returned it and didn't made sonal as reactcomponent
@@ -68,15 +84,30 @@ const garg = () =>{
     <sonal/>
 }
 */
-const Sonal = () => {
-    return <h1>My name is Sonal</h1>;
-  };
-  
-  const Garg = () => {
-    return (
-      <div>
-        <h1>I am from Karnal</h1>
-        <Sonal />
-      </div>
+
+const header = () => {
+    return(
+        <>
+        <header className="header">
+            <div className="left">
+                <img src={logo} alt="logo" />
+            </div>
+        </header>
+        <div className="center">
+            <input
+            className="data"
+            type= "text"
+            placeholder="What do you want to search"/>
+            <button type="submit">
+            <i class="fa fa-search"></i>
+            </button>
+        </div>
+        <div className="right">
+          <img src={userIcon} alt="User Icon" />
+        </div>
+        </>
     );
-  };
+};
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<header />);
+  
