@@ -1,5 +1,3 @@
-// ## Namaste React Course by Akshay Saini
-// Chapter 04 - Talk is Cheap, show me the code
 
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -1909,26 +1907,12 @@ const Body = () => {
   );
 };
 
-// Footer component for footer section
+
 const Footer = () => {
-  const year = new Date().getFullYear();
-  return (
-    <div className="footer">
-      Created By
-      <i class="fa-solid fa-heart"></i>
-      <a href="https://www.linkedin.com/in/chetannada/" target="_blank">
-        Chetan Nada
-      </a>
-      <i class="fa-solid fa-copyright"></i>
-      {year}
-      <strong>
-        Food<span>Fire</span>
-      </strong>
-    </div>
-  );
+  return( <h4> Footer </h4>);
 };
 
-// AppLayout component to show: Header, Body, Footer
+
 const AppLayout = () => {
   return (
     <React.Fragment>
@@ -1941,4 +1925,3 @@ const AppLayout = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<AppLayout />);
-
